@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500&display=swap");
+
+.nav-tittle-inside {
+    display: flex;
+    letter-spacing: 2px;
+}
+
+.nav-char-1 {
+    transform: rotate(-8deg) translateY(-1px);
+}
+.nav-char-2 {
+    transform: rotate(-6deg) translateY(-4.5px);
+}
+.nav-char-3 {
+    transform: rotate(-1.85deg) translateY(-6px);
+}
+.nav-char-4 {
+    transform: rotate(1.85deg) translateY(-6px);
+}
+.nav-char-5 {
+    transform: rotate(4.92deg) translateY(-4px);
+}
+.nav-char-6 {
+    transform: rotate(12deg);
+}
