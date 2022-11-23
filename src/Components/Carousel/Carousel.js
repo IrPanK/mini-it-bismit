@@ -125,6 +125,26 @@ const Carousel = () => {
                 onClick={handleNext}
                 className="absolute top-0 right-0 z-10 h-full w-[2.5rem] fill-[#A5C5C3] hover:fill-[#007872] hover:cursor-pointer transition-all"
             />
+            <div className="flex absolute left-[47.5%] bottom-16 z-20">
+                <div
+                    onClick={() => setSlider(0)}
+                    className={`w-[0.625rem] h-[0.625rem] ${
+                        slider === 0 ? "bg-[#007872]" : "bg-[#A5C5C3]"
+                    } rounded-full hover:cursor-pointer transition-all`}
+                ></div>
+                <div
+                    onClick={() => setSlider(1)}
+                    className={`w-[0.625rem] h-[0.625rem] ${
+                        slider === 1 ? "bg-[#007872]" : "bg-[#A5C5C3]"
+                    } rounded-full mx-[1.625rem] hover:cursor-pointer transition-all`}
+                ></div>
+                <div
+                    onClick={() => setSlider(2)}
+                    className={`w-[0.625rem] h-[0.625rem] ${
+                        slider === 2 ? "bg-[#007872]" : "bg-[#A5C5C3]"
+                    } rounded-full hover:cursor-pointer transition-all`}
+                ></div>
+            </div>
             <div
                 className={`flex  max-h-[50.438rem] translate-x-[-${
                     slider * 100
