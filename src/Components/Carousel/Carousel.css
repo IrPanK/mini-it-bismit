@@ -1,3 +1,51 @@
-#merch {
-    margin-top: 100rem;
+.slide-left-out {
+    animation: slideLeftOut 0.5s ease-in-out;
+}
+
+@keyframes slideLeftOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.slide-right-out {
+    animation: slideRightOut 0.5s ease-in-out;
+}
+
+@keyframes slideRightOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.slide-left-in {
+    animation: slideLeftIn 0.5s ease-in-out;
+}
+
+@keyframes slideLeftIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-right-in {
+    animation: slideRightIn 0.5s ease-in-out;
+}
+
+@keyframes slideRightIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
