@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
@@ -7,84 +7,6 @@ import Winkler from "../../images/winkler.svg";
 import PileClothes from "../../images/pileClothes.svg";
 
 import "./Carousel.css";
-
-const components = {
-    1: `<section className="relative">
-                <div className="flex w-4/5 mx-auto pt-[8rem] pl-[3rem]">
-                    <div className="w-3/5 pt-[3rem]">
-                        <h1 className="mb-8 text-[3.875rem] font-semibold tracking-[0.5rem]">
-                            ABOUT US
-                        </h1>
-                        <p className="text-[1.5rem] font-normal tracking-[0.185rem] pr-[4.6rem]">
-                            Lorem ipsum dolor sit amet consectetur adipiscing
-                            elit Ut et massa mi. Aliquam in hendrerit urna.
-                            Pellentesque sit amet sapien fringilla, mattis
-                            ligula consectetur, ultrices mauris. Maecenas vitae
-                            mattis tellus. Nullam quis
-                        </p>
-                    </div>
-                    <img src={Glossy} alt="glossy" />
-                </div>
-                <div className="absolute top-[-2px] right-0 3xl:w-[40rem] 2xl:w-[30rem] h-[59.25rem] bg-[#E9DAC1] z-[-1]"></div>
-            </section>`,
-    2: `<section className="relative">
-                <div className="absolute left-0 top-0 h-0 w-0 border-solid 2xl:border-b-[58.875rem] 2xl:border-r-[70rem] border-b-[53rem] border-r-[60rem] border-r-transparent border-b-[#E9DAC1] z-[-2]"></div>
-                <div className="absolute right-0 top-0 h-0 w-0 border-solid 2xl:border-t-[58.875rem] 2xl:border-r-[50rem] border-t-[53rem] border-r-[40rem] border-r-[#F7ECDE] border-t-transparent z-[-1]"></div>
-                <div className="flex justify-between w-4/5 mx-auto pt-[4rem]">
-                    <div className="pt-[3rem] text-right 2xl:mr-20 mr-18">
-                        <h1 className="mb-8 text-[3.875rem] font-semibold tracking-[0.5rem]">
-                            PROJECT
-                        </h1>
-                        <p className="text-[1.5rem] font-normal tracking-[0.185rem] mb-12">
-                            Lorem ipsum dolor sit amet consectetur adipiscing
-                            elit Ut et massa mi. Aliquam in hendrerit urna.
-                            Pellentesque sit amet sapien fringilla, mattis
-                            ligula consectetur, ultrices mauris. Maecenas vitae
-                            mattis tellus. Nullam quis
-                        </p>
-                        <Link
-                            to={"#project"}
-                            className="text-[1.25rem] font-normal tracking-[0.185rem] bg-[#FBF8F1] py-2.5 px-5 border-solid border-[3px] border-[#E9DAC1]"
-                        >
-                            View More
-                        </Link>
-                    </div>
-                    <img
-                        src={Winkler}
-                        alt="winkler"
-                        className="scale-[0.8] 2xl:scale-[1] translate-y-[-3rem] translate-x-[1rem] 2xl:translate-y-0 2xl:translate-x-0"
-                    />
-                </div>
-            </section>`,
-    3: `<section className="relative bg-[#F7ECDE]">
-                <div className="absolute right-0 top-0 h-0 w-0 border-solid border-t-[50.438rem] border-r-[50rem] border-r-[#ffffff] border-t-transparent"></div>
-                <div className="flex justify-between w-4/5 mx-auto pt-[4rem]">
-                    <div className="pt-[5rem] text-center">
-                        <h1 className="mb-8 text-[3.875rem] font-semibold tracking-[0.5rem]">
-                            Get Out Merch!
-                        </h1>
-                        <p className="text-[1.5rem] font-normal tracking-[0.185rem] mb-12">
-                            Lorem ipsum dolor sit amet consectetur adipiscing
-                            elit Ut et massa mi. Aliquam in hendrerit urna.
-                            Pellentesque sit amet sapien fringilla, mattis
-                            ligula consectetur, ultrices mauris. Maecenas vitae
-                            mattis tellus. Nullam quis
-                        </p>
-                        <Link
-                            to={"#merch"}
-                            className="text-[1.25rem] font-normal tracking-[0.185rem] bg-[#FBF8F1] py-2.5 px-5 border-solid border-[3px] border-[#E9DAC1]"
-                        >
-                            View More
-                        </Link>
-                    </div>
-                    <img
-                        src={PileClothes}
-                        alt="pile of clothes"
-                        className="scale-[0.8] 2xl:scale-[1] translate-y-[-3rem] translate-x-[1rem] 2xl:translate-y-[-3rem] 2xl:translate-x-0"
-                    />
-                </div>
-            </section>`,
-};
 
 const Carousel = () => {
     const [slider, setSlider] = useState(0);
@@ -146,9 +68,11 @@ const Carousel = () => {
                 ></div>
             </div>
             <div
-                className={`flex  max-h-[50.438rem] translate-x-[-${
-                    slider * 100
-                }%] transition-all duration-500`}
+                className={`flex  max-h-[50.438rem] ${
+                    slider === 0 ? "translate-x-0" : ""
+                } ${slider === 1 ? "translate-x-[-100%]" : ""} ${
+                    slider === 2 ? "translate-x-[-200%]" : ""
+                } transition-all duration-500`}
             >
                 <section className={`relative min-w-full h-[50.438rem]`}>
                     <div className="flex w-4/5 mx-auto pt-[8rem] pl-[3rem]">
@@ -196,7 +120,7 @@ const Carousel = () => {
                         <img
                             src={Winkler}
                             alt="winkler"
-                            className="scale-[0.8] 2xl:scale-[1] translate-y-[-3rem] translate-x-[1rem] 2xl:translate-y-0 2xl:translate-x-0"
+                            className="scale-[0.8] 2xl:scale-[0.9] translate-y-[-3rem] translate-x-[1rem] 2xl:translate-y-[-1rem] 2xl:translate-x-[-1rem]"
                         />
                     </div>
                 </section>
