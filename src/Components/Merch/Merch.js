@@ -13,7 +13,7 @@ const Merch = () => {
             >
                 MERCH
             </h1>
-            <div className="relative w-full overflow-hidden h-[27.375rem] bg-[#FBF8F1] mt-[3.5rem] z-10">
+            <div className="relative w-full overflow-hidden h-[27.375rem] bg-[#FBF8F1] mt-[3.5rem] z-10 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                 <div className="absolute top-[3rem] left-[-24.563rem] w-[48.563rem] h-[48.563rem] bg-[#A5C5C3] z-[-1] rounded-full"></div>
                 <div className="flex w-[80%] mx-auto items-center justify-evenly">
                     <img
