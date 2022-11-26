@@ -7,8 +7,8 @@ const Navbar = () => {
     return (
         <nav className="w-6/12 h-24 mx-auto">
             <ul className="flex justify-center items-center h-full">
-                <li className="text-[#007872] etxt-[1.125rem] font-medium border-b-2 border-[#f05f3b]">
-                    <Link to={"/#merch"}>MERCH</Link>
+                <li className="text-[#007872] text-[1.125rem] font-medium border-b-2 border-[#f05f3b]">
+                    <Link to={"#merch"}>MERCH</Link>
                 </li>
                 <li className="mx-[2.375rem] text-[2.875rem] text-[#ec380b] font-bold">
                     <Link to={"#"}>
@@ -22,7 +22,7 @@ const Navbar = () => {
                         </div>
                     </Link>
                 </li>
-                <li className="text-[#007872] etxt-[1.125rem] font-medium border-b-2 border-[#f05f3b]">
+                <li className="text-[#007872] text-[1.125rem] font-medium border-b-2 border-[#f05f3b]">
                     <Link to={"#project"}>PROJECT</Link>
                 </li>
             </ul>

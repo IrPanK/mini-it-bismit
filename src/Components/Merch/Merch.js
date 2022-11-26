@@ -6,11 +6,8 @@ import Human from "../../images/human.svg";
 
 const Merch = () => {
     return (
-        <div className="w-[90%] mx-auto mt-[3.75rem]">
-            <h1
-                className="inline text-[#409A95] text-[1.688rem] font-medium border-b-[5px] border-[#f05f3b]"
-                id="merch"
-            >
+        <div className="w-[90%] mx-auto mt-[3.75rem]" id="merch">
+            <h1 className="inline text-[#409A95] text-[1.688rem] font-medium border-b-[5px] border-[#f05f3b]">
                 MERCH
             </h1>
             <div className="relative w-full overflow-hidden h-[27.375rem] bg-[#FBF8F1] mt-[3.5rem] z-10 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
