@@ -6,8 +6,6 @@ import Glossy from "../../images/Glossy.png";
 import Winkler from "../../images/winkler.svg";
 import PileClothes from "../../images/pileClothes.svg";
 
-import "./Carousel.css";
-
 const Carousel = () => {
     const [slider, setSlider] = useState(0);
 
@@ -81,12 +79,11 @@ const Carousel = () => {
                                 ABOUT US
                             </h1>
                             <p className="text-[1.5rem] font-normal tracking-[0.185rem] pr-[4.6rem]">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipiscing elit Ut et massa mi. Aliquam in
-                                hendrerit urna. Pellentesque sit amet sapien
-                                fringilla, mattis ligula consectetur, ultrices
-                                mauris. Maecenas vitae mattis tellus. Nullam
-                                quis
+                                Bismit merupakan organisasi yang menunjang
+                                finansial internal BEM Fasilkom UI dengan
+                                mencari sumber daya potensial dari bisnis
+                                pengembangan proyek teknologi informasi (TI),
+                                maupun bisnis-bisnis non-TI.
                             </p>
                         </div>
                         <img src={Glossy} alt="glossy" />
@@ -103,12 +100,11 @@ const Carousel = () => {
                                 PROJECT
                             </h1>
                             <p className="text-[1.5rem] font-normal tracking-[0.185rem] mb-12">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipiscing elit Ut et massa mi. Aliquam in
-                                hendrerit urna. Pellentesque sit amet sapien
-                                fringilla, mattis ligula consectetur, ultrices
-                                mauris. Maecenas vitae mattis tellus. Nullam
-                                quis
+                                Project merupakan salah satu bidang yang kami
+                                kerjakan untuk menunjang finansial internal BEM
+                                Fasilkom UI. Kami telah mengejarkan banyak
+                                project-project terutama di bidang TI. Lihat
+                                selengkapnya di bagian project.
                             </p>
                             <Link
                                 to={"#project"}
@@ -135,12 +131,9 @@ const Carousel = () => {
                                 Get Out Merch!
                             </h1>
                             <p className="text-[1.5rem] font-normal tracking-[0.185rem] mb-12">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipiscing elit Ut et massa mi. Aliquam in
-                                hendrerit urna. Pellentesque sit amet sapien
-                                fringilla, mattis ligula consectetur, ultrices
-                                mauris. Maecenas vitae mattis tellus. Nullam
-                                quis
+                                Kami menjual merchandise BEM Fasilkom UI dengan
+                                jumlah yang terbatas. Dapatkan segera
+                                merchandise-mu!
                             </p>
                             <Link
                                 to={"#merch"}

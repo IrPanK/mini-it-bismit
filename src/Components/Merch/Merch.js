@@ -4,6 +4,29 @@ import MerchProduct from "./MerchProduct";
 
 import Human from "../../images/human.svg";
 
+const dataMerch = [
+    {
+        name: "CS HOODIE - GREY",
+        price: "RP 200.000,-",
+        image: "hoodie",
+    },
+    {
+        name: "CS SWEATER - GREY",
+        price: "RP 150.000,-",
+        image: "sweater-grey",
+    },
+    {
+        name: "CS SWEATER - WHITE",
+        price: "RP 150.000,-",
+        image: "sweater-white",
+    },
+    {
+        name: "CS HOODIE - BLACK",
+        price: "RP 200.000,-",
+        image: "hoodie-black",
+    },
+];
+
 const Merch = () => {
     return (
         <div className="w-[90%] mx-auto mt-[3.75rem]" id="merch">
@@ -20,15 +43,14 @@ const Merch = () => {
                     />
                     <div>
                         <h3 className="text-[2.188rem] font-medium">
-                            INI BARANG{" "}
+                            Sweater{" "}
                             <span className="font-extrabold tracking-[0.5rem]">
                                 LIMITED
                             </span>{" "}
-                            PUNYA
+                            Computer Science!
                         </h3>
                         <p className="text-[1.25rem] mb-[1.875rem]">
-                            Deskripsi barangnya ini tuh kalau mau sama harga
-                            bisa
+                            Miliki segera! Stok dan produksi terbatas!
                         </p>
                         <Link
                             className="border-2 border-[#A5C5C3] py-[0.375rem] px-[1.125rem]"
@@ -39,11 +61,14 @@ const Merch = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between mt-[2.688rem] mb-20">
-                <MerchProduct />
-                <MerchProduct />
-                <MerchProduct />
-                <MerchProduct />
+            <div className="flex justify-between items-end mt-[2.688rem] mb-20">
+                {dataMerch.map((val) => (
+                    <MerchProduct
+                        name={val.name}
+                        price={val.price}
+                        image={val.image}
+                    />
+                ))}
             </div>
         </div>
     );
