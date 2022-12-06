@@ -4,6 +4,11 @@ import App from "./App";
 
 import "./index.css";
 
+// kakaka
+// madimadaja
+// misakla
+// asdakakak
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
